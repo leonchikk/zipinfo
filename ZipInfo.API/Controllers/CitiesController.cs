@@ -16,7 +16,7 @@ namespace ZipInfo.API.Controllers
             _zipInfoService = zipInfoService;
         }
 
-        [HttpGet("get-info-by-zip/{zipCode}")]
+        [HttpGet("info/zip-code/{zipCode}")]
         public async Task<IActionResult> GetInfoAsync(string zipCode)
         {
             var info = await _zipInfoService.GetInfoAsync(zipCode);
